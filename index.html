@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academia de Programación - Mauricio Galaz</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-code"></i>
+                <span>Academia MG</span>
+            </div>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                <li><a href="#cursos" class="nav-link">Cursos</a></li>
+                <li><a href="#practica" class="nav-link">Práctica</a></li>
+                <li><a href="#recursos" class="nav-link">Recursos</a></li>
+                <li><a href="#contacto" class="nav-link">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1 class="fade-in">Aprende a Programar</h1>
+                <p class="hero-subtitle fade-in-delay">Con Mauricio Galaz</p>
+                <p class="hero-description">
+                    Domina Python, Java y Desarrollo Web desde cero. Una plataforma diseñada 
+                    especialmente para estudiantes que quieren convertirse en desarrolladores profesionales.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#cursos" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i> Comenzar Ahora
+                    </a>
+                    <a href="#practica" class="btn btn-secondary">
+                        <i class="fas fa-code"></i> Practicar
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="code-animation">
+                    <div class="code-line"></div>
+                    <div class="code-line"></div>
+                    <div class="code-line"></div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre-mi" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="profile-card">
+                        <div class="profile-icon">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="stats">
+                            <div class="stat">
+                                <i class="fas fa-graduation-cap"></i>
+                                <span>+500 Estudiantes</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-trophy"></i>
+                                <span>Instructor Certificado</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h2>Sobre el Instructor</h2>
+                    <h3>Mauricio Galaz</h3>
+                    <p>
+                        Desarrollador de software con años de experiencia en la industria. Mi pasión es 
+                        enseñar programación de manera clara, práctica y efectiva. He ayudado a cientos 
+                        de estudiantes a alcanzar sus metas en el desarrollo de software.
+                    </p>
+                    <div class="skills-showcase">
+                        <div class="skill-badge">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="skill-badge">
+                            <i class="fab fa-java"></i>
+                            <span>Java</span>
+                        </div>
+                        <div class="skill-badge">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML/CSS</span>
+                        </div>
+                        <div class="skill-badge">
+                            <i class="fab fa-js"></i>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="cursos" class="courses">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nuestros Cursos</h2>
+                <p>Aprende los lenguajes más demandados del mercado</p>
+            </div>
+            <div class="courses-grid">
+                <!-- Python Course -->
+                <div class="course-card" data-course="python">
+                    <div class="course-icon python-color">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <h3>Python</h3>
+                    <p>Desde fundamentos hasta programación avanzada. Ideal para principiantes y análisis de datos.</p>
+                    <ul class="course-features">
+                        <li><i class="fas fa-check"></i> Sintaxis básica y estructuras</li>
+                        <li><i class="fas fa-check"></i> Programación orientada a objetos</li>
+                        <li><i class="fas fa-check"></i> Módulos y bibliotecas</li>
+                        <li><i class="fas fa-check"></i> Proyectos prácticos</li>
+                    </ul>
+                    <button class="btn btn-course" onclick="showCourseDetail('python')">
+                        Ver Detalles <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- Java Course -->
+                <div class="course-card" data-course="java">
+                    <div class="course-icon java-color">
+                        <i class="fab fa-java"></i>
+                    </div>
+                    <h3>Java</h3>
+                    <p>Aprende programación robusta y escalable. Perfecto para desarrollo empresarial y Android.</p>
+                    <ul class="course-features">
+                        <li><i class="fas fa-check"></i> Fundamentos de Java</li>
+                        <li><i class="fas fa-check"></i> POO avanzada</li>
+                        <li><i class="fas fa-check"></i> Colecciones y Streams</li>
+                        <li><i class="fas fa-check"></i> Manejo de excepciones</li>
+                    </ul>
+                    <button class="btn btn-course" onclick="showCourseDetail('java')">
+                        Ver Detalles <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- HTML+CSS Course -->
+                <div class="course-card" data-course="web">
+                    <div class="course-icon web-color">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <h3>HTML + CSS</h3>
+                    <p>Crea sitios web modernos y responsivos. La base esencial del desarrollo web front-end.</p>
+                    <ul class="course-features">
+                        <li><i class="fas fa-check"></i> HTML5 semántico</li>
+                        <li><i class="fas fa-check"></i> CSS3 y Flexbox/Grid</li>
+                        <li><i class="fas fa-check"></i> Diseño responsivo</li>
+                        <li><i class="fas fa-check"></i> Animaciones y transiciones</li>
+                    </ul>
+                    <button class="btn btn-course" onclick="showCourseDetail('web')">
+                        Ver Detalles <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Practice Section -->
+    <section id="practica" class="practice">
+        <div class="container">
+            <div class="section-header">
+                <h2>Zona de Práctica</h2>
+                <p>Escribe, ejecuta y aprende practicando código en tiempo real</p>
+            </div>
+
+            <!-- Language Selector -->
+            <div class="language-tabs">
+                <button class="tab-btn active" data-lang="python">
+                    <i class="fab fa-python"></i> Python
+                </button>
+                <button class="tab-btn" data-lang="java">
+                    <i class="fab fa-java"></i> Java
+                </button>
+                <button class="tab-btn" data-lang="html">
+                    <i class="fab fa-html5"></i> HTML+CSS
+                </button>
+            </div>
+
+            <!-- Python Editor -->
+            <div class="editor-container active" id="python-editor">
+                <div class="editor-header">
+                    <h3><i class="fab fa-python"></i> Editor Python</h3>
+                    <div class="editor-actions">
+                        <button class="btn-small btn-example" onclick="loadExample('python')">
+                            <i class="fas fa-lightbulb"></i> Ejemplo
+                        </button>
+                        <button class="btn-small btn-clear" onclick="clearEditor('python')">
+                            <i class="fas fa-eraser"></i> Limpiar
+                        </button>
+                        <button class="btn-small btn-run" onclick="runCode('python')">
+                            <i class="fas fa-play"></i> Ejecutar
+                        </button>
+                    </div>
+                </div>
+                <div class="editor-workspace">
+                    <div class="code-input">
+                        <textarea id="python-code" class="code-editor" placeholder="# Escribe tu código Python aquí
+# Por ejemplo:
+print('Hola Mundo')"></textarea>
+                    </div>
+                    <div class="code-output">
+                        <div class="output-header">Resultado:</div>
+                        <pre id="python-output" class="output-content">La salida aparecerá aquí...</pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Java Editor -->
+            <div class="editor-container" id="java-editor">
+                <div class="editor-header">
+                    <h3><i class="fab fa-java"></i> Editor Java</h3>
+                    <div class="editor-actions">
+                        <button class="btn-small btn-example" onclick="loadExample('java')">
+                            <i class="fas fa-lightbulb"></i> Ejemplo
+                        </button>
+                        <button class="btn-small btn-clear" onclick="clearEditor('java')">
+                            <i class="fas fa-eraser"></i> Limpiar
+                        </button>
+                        <button class="btn-small btn-run" onclick="runCode('java')">
+                            <i class="fas fa-play"></i> Ejecutar
+                        </button>
+                    </div>
+                </div>
+                <div class="editor-workspace">
+                    <div class="code-input">
+                        <textarea id="java-code" class="code-editor" placeholder="// Escribe tu código Java aquí
+// Por ejemplo:
+public class Main {
+    public static void main(String[] args) {
+        System.out.println(\"Hola Mundo\");
+    }
+}"></textarea>
+                    </div>
+                    <div class="code-output">
+                        <div class="output-header">Resultado:</div>
+                        <pre id="java-output" class="output-content">La salida aparecerá aquí...</pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- HTML+CSS Editor -->
+            <div class="editor-container" id="html-editor">
+                <div class="editor-header">
+                    <h3><i class="fab fa-html5"></i> Editor HTML + CSS</h3>
+                    <div class="editor-actions">
+                        <button class="btn-small btn-example" onclick="loadExample('html')">
+                            <i class="fas fa-lightbulb"></i> Ejemplo
+                        </button>
+                        <button class="btn-small btn-clear" onclick="clearEditor('html')">
+                            <i class="fas fa-eraser"></i> Limpiar
+                        </button>
+                        <button class="btn-small btn-run" onclick="runCode('html')">
+                            <i class="fas fa-eye"></i> Ver Resultado
+                        </button>
+                    </div>
+                </div>
+                <div class="editor-workspace">
+                    <div class="code-input">
+                        <div class="html-tabs">
+                            <button class="html-tab active" data-tab="html">HTML</button>
+                            <button class="html-tab" data-tab="css">CSS</button>
+                        </div>
+                        <textarea id="html-code" class="code-editor active" placeholder="<!-- Escribe tu código HTML aquí -->
+<h1>Hola Mundo</h1>"></textarea>
+                        <textarea id="css-code" class="code-editor" placeholder="/* Escribe tu código CSS aquí */
+h1 {
+    color: blue;
+}"></textarea>
+                    </div>
+                    <div class="code-output">
+                        <div class="output-header">Vista Previa:</div>
+                        <iframe id="html-output" class="html-preview"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercises Section -->
+            <div class="exercises-section">
+                <h3><i class="fas fa-dumbbell"></i> Ejercicios Prácticos</h3>
+                <div class="exercises-grid" id="exercises-grid">
+                    <!-- Exercises will be loaded dynamically -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="recursos" class="resources">
+        <div class="container">
+            <div class="section-header">
+                <h2>Recursos de Aprendizaje</h2>
+                <p>Material complementario para potenciar tu aprendizaje</p>
+            </div>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Documentación</h3>
+                    <p>Guías completas y referencias rápidas para cada lenguaje</p>
+                    <ul class="resource-links">
+                        <li><a href="#" onclick="showResource('python-docs')"><i class="fab fa-python"></i> Python Docs</a></li>
+                        <li><a href="#" onclick="showResource('java-docs')"><i class="fab fa-java"></i> Java Docs</a></li>
+                        <li><a href="#" onclick="showResource('web-docs')"><i class="fab fa-html5"></i> Web Docs</a></li>
+                    </ul>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>Video Tutoriales</h3>
+                    <p>Aprende viendo ejemplos paso a paso</p>
+                    <ul class="resource-links">
+                        <li><a href="#"><i class="fas fa-play-circle"></i> Curso Python Básico</a></li>
+                        <li><a href="#"><i class="fas fa-play-circle"></i> Fundamentos Java</a></li>
+                        <li><a href="#"><i class="fas fa-play-circle"></i> HTML/CSS Responsive</a></li>
+                    </ul>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-puzzle-piece"></i>
+                    </div>
+                    <h3>Proyectos</h3>
+                    <p>Construye aplicaciones reales para tu portafolio</p>
+                    <ul class="resource-links">
+                        <li><a href="#"><i class="fas fa-folder"></i> Calculadora Python</a></li>
+                        <li><a href="#"><i class="fas fa-folder"></i> Sistema Java</a></li>
+                        <li><a href="#"><i class="fas fa-folder"></i> Portfolio Web</a></li>
+                    </ul>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Comunidad</h3>
+                    <p>Conecta con otros estudiantes y resuelve dudas</p>
+                    <ul class="resource-links">
+                        <li><a href="#"><i class="fas fa-users"></i> Foro de Discusión</a></li>
+                        <li><a href="#"><i class="fas fa-question-circle"></i> Preguntas Frecuentes</a></li>
+                        <li><a href="#"><i class="fas fa-hands-helping"></i> Ayuda entre Pares</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>¿Listo para Comenzar?</h2>
+                <p>Contáctame para más información sobre los cursos</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-card">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p>contacto@academiamg.com</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fab fa-whatsapp"></i>
+                        <h3>WhatsApp</h3>
+                        <p>+56 9 XXXX XXXX</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Ubicación</h3>
+                        <p>Chile</p>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Tu Nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Tu Email" required>
+                    </div>
+                    <div class="form-group">
+                        <select id="interest">
+                            <option value="">Selecciona un curso</option>
+                            <option value="python">Python</option>
+                            <option value="java">Java</option>
+                            <option value="web">HTML + CSS</option>
+                            <option value="all">Todos los cursos</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" rows="5" placeholder="Tu Mensaje" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i> Enviar Mensaje
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-code"></i> Academia MG</h3>
+                    <p>Formando los desarrolladores del futuro</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Cursos</h4>
+                    <ul>
+                        <li><a href="#cursos">Python</a></li>
+                        <li><a href="#cursos">Java</a></li>
+                        <li><a href="#cursos">HTML + CSS</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Recursos</h4>
+                    <ul>
+                        <li><a href="#recursos">Documentación</a></li>
+                        <li><a href="#recursos">Video Tutoriales</a></li>
+                        <li><a href="#recursos">Proyectos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> contacto@academiamg.com</li>
+                        <li><i class="fab fa-whatsapp"></i> +56 9 XXXX XXXX</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Chile</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Academia de Programación - Mauricio Galaz. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for Course Details -->
+    <div class="modal" id="courseModal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
